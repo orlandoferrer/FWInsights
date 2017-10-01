@@ -32,16 +32,25 @@
 }
 
 .modal-buttons > p {
-  font-size: 40px;
+  font-size: 30px;
   margin: 10px 0 0 0;
 }
 
-.modal-buttons > button {
-  width: 80%;
+.modal-buttons button {
+  width: 100%;
   background: #900020;
   color: white;
   border-radius: 3px;
-  height: 60px;
-  margin: 10px;
+  height: 100%;
   font-size: 30px;
+}
+
+.modal-buttons > a {
+  width: 80%;
+  height: 50px;
+  margin: 10px 0;
+}
+
+.modal-buttons button:hover {
+  cursor: pointer;
 }

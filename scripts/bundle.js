@@ -29218,6 +29218,8 @@ var _custom_styles = __webpack_require__(118);
 
 var _custom_styles2 = _interopRequireDefault(_custom_styles);
 
+var _reactRouterDom = __webpack_require__(16);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29291,14 +29293,23 @@ var InfoModal = function (_React$Component) {
                 'Refilled?'
               ),
               _react2.default.createElement(
-                'button',
-                { onClick: this.toggleModal },
-                'Yes'
+                _reactRouterDom.Link,
+                { to: '/tables' },
+                _react2.default.createElement(
+                  'button',
+                  {
+                    onClick: this.toggleModal },
+                  'Yes'
+                )
               ),
               _react2.default.createElement(
-                'button',
-                { onClick: this.toggleModal },
-                'No'
+                _reactRouterDom.Link,
+                { to: '/tables' },
+                _react2.default.createElement(
+                  'button',
+                  { onClick: this.toggleModal },
+                  'No'
+                )
               )
             )
           )

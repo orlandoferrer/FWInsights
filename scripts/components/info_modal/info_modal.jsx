@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import customStyles from './custom_styles';
+import { Link } from 'react-router-dom';
 
 const cupImgPaths = [
   './images/cup_image_full.png',
@@ -44,12 +45,17 @@ class InfoModal extends React.Component {
             </div>
             <div className="modal-buttons">
               <p>Refilled?</p>
-              <button onClick={this.toggleModal}>
-                Yes
-              </button>
-              <button onClick={this.toggleModal}>
-                No
-              </button>
+              <Link to="/tables">
+                <button
+                  onClick={this.toggleModal}>
+                    Yes
+                </button>
+              </Link>
+              <Link to="/tables">
+                <button onClick={this.toggleModal}>
+                    No
+                </button>
+              </Link>
             </div>
           </div>
         </Modal>
