@@ -21,8 +21,6 @@ const TableComponent = () => {
           sampleCustomers.map((el) => {
             return (
               <div className="customer-place">
-              <img src="./images/glass.png"
-                className="customer-glass"/>
                 {/*<div className="customer-glass"/>*/}
               <InfoModal/>
               <img src="./images/plate2.png" className="customer-plate"/>

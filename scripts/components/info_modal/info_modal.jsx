@@ -18,7 +18,6 @@ const customStyles = {
     width                 : '400px',
     height                : '500px',
     transform             : 'translate(57%, -10%)',
-    // position              : 'absolute',
   },
   overlay: {
     backgroundColor       : 'rgba(0, 0, 0, 0.75)',
@@ -42,14 +41,32 @@ class InfoModal extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.toggleModal}></button>
+        <img src="./images/glass.png"
+          className="customer-glass"
+          onClick={this.toggleModal}/>
         <Modal
             isOpen={this.state.modalIsOpen}
             onAfterOpen={this.afterOpenModal}
             onRequestClose={this.toggleModal}
             style={customStyles}
             contentLabel="Example Modal">
-          <p>Hello, modal!</p>
+          <div className="info-modal">
+            <div className="modal-header">
+              <p>Item name</p>
+            </div>
+            <div className="modal-image">
+              <div>Cup image</div>
+            </div>
+            <div className="modal-buttons">
+              <p>Refilled?</p>
+              <button onClick={this.toggleModal}>
+                Yes
+              </button>
+              <button onClick={this.toggleModal}>
+                No
+              </button>
+            </div>
+          </div>
         </Modal>
       </div>
     );

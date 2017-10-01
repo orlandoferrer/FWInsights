@@ -27598,8 +27598,6 @@ var TableComponent = function TableComponent() {
         return _react2.default.createElement(
           'div',
           { className: 'customer-place' },
-          _react2.default.createElement('img', { src: './images/glass.png',
-            className: 'customer-glass' }),
           _react2.default.createElement(_info_modal2.default, null),
           _react2.default.createElement('img', { src: './images/plate2.png', className: 'customer-plate' })
         );
@@ -29241,7 +29239,6 @@ var customStyles = {
     width: '400px',
     height: '500px',
     transform: 'translate(57%, -10%)'
-    // position              : 'absolute',
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.75)'
@@ -29274,7 +29271,9 @@ var InfoModal = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement('button', { onClick: this.toggleModal }),
+        _react2.default.createElement('img', { src: './images/glass.png',
+          className: 'customer-glass',
+          onClick: this.toggleModal }),
         _react2.default.createElement(
           _reactModal2.default,
           {
@@ -29284,9 +29283,45 @@ var InfoModal = function (_React$Component) {
             style: customStyles,
             contentLabel: 'Example Modal' },
           _react2.default.createElement(
-            'p',
-            null,
-            'Hello, modal!'
+            'div',
+            { className: 'info-modal' },
+            _react2.default.createElement(
+              'div',
+              { className: 'modal-header' },
+              _react2.default.createElement(
+                'p',
+                null,
+                'Item name'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'modal-image' },
+              _react2.default.createElement(
+                'div',
+                null,
+                'Cup image'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'modal-buttons' },
+              _react2.default.createElement(
+                'p',
+                null,
+                'Refilled?'
+              ),
+              _react2.default.createElement(
+                'button',
+                { onClick: this.toggleModal },
+                'Yes'
+              ),
+              _react2.default.createElement(
+                'button',
+                { onClick: this.toggleModal },
+                'No'
+              )
+            )
           )
         )
       );
