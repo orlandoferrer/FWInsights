@@ -29214,6 +29214,10 @@ var _reactModal = __webpack_require__(48);
 
 var _reactModal2 = _interopRequireDefault(_reactModal);
 
+var _custom_styles = __webpack_require__(118);
+
+var _custom_styles2 = _interopRequireDefault(_custom_styles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29222,28 +29226,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var customStyles = {
-  content: {
-    top: '5%',
-    left: '5%',
-    right: '5%',
-    bottom: '5%',
-    marginTop: '5%',
-    marginBottom: '5%',
-    marginLeft: '5%',
-    marginRight: '5%',
-    background: '000',
-    overflow: 'visible',
-    borderRadius: '0',
-    border: 'none',
-    width: '400px',
-    height: '500px',
-    transform: 'translate(57%, -10%)'
-  },
-  overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.75)'
-  }
-};
+var cupImgPaths = ['./images/cup_image_full.png', './images/cup_image_half.png', './images/cup_image_low.png'];
 
 var InfoModal = function (_React$Component) {
   _inherits(InfoModal, _React$Component);
@@ -29280,7 +29263,7 @@ var InfoModal = function (_React$Component) {
             isOpen: this.state.modalIsOpen,
             onAfterOpen: this.afterOpenModal,
             onRequestClose: this.toggleModal,
-            style: customStyles,
+            style: _custom_styles2.default,
             contentLabel: 'Example Modal' },
           _react2.default.createElement(
             'div',
@@ -29297,11 +29280,7 @@ var InfoModal = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { className: 'modal-image' },
-              _react2.default.createElement(
-                'div',
-                null,
-                'Cup image'
-              )
+              _react2.default.createElement('img', { src: cupImgPaths[Math.floor(Math.random() * cupImgPaths.length)] })
             ),
             _react2.default.createElement(
               'div',
@@ -29332,6 +29311,41 @@ var InfoModal = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = InfoModal;
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var customStyles = {
+  content: {
+    top: '5%',
+    left: '5%',
+    right: '5%',
+    bottom: '5%',
+    marginTop: '5%',
+    marginBottom: '5%',
+    marginLeft: '5%',
+    marginRight: '5%',
+    background: '000',
+    overflow: 'visible',
+    borderRadius: '0',
+    border: 'none',
+    width: '400px',
+    height: '500px',
+    transform: 'translate(57%, -10%)'
+  },
+  overlay: {
+    backgroundColor: 'rgba(0, 0, 0, 0.75)'
+  }
+};
+
+exports.default = customStyles;
 
 /***/ })
 /******/ ]);

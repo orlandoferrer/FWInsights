@@ -1,28 +1,13 @@
 import React from 'react';
 import Modal from 'react-modal';
+import customStyles from './custom_styles';
 
-const customStyles = {
-  content : {
-    top                   : '5%',
-    left                  : '5%',
-    right                 : '5%',
-    bottom                : '5%',
-    marginTop             : '5%',
-    marginBottom          : '5%',
-    marginLeft            : '5%',
-    marginRight           : '5%',
-    background            : '000',
-    overflow              : 'visible',
-    borderRadius          : '0',
-    border                : 'none',
-    width                 : '400px',
-    height                : '500px',
-    transform             : 'translate(57%, -10%)',
-  },
-  overlay: {
-    backgroundColor       : 'rgba(0, 0, 0, 0.75)',
-  }
-};
+const cupImgPaths = [
+  './images/cup_image_full.png',
+  './images/cup_image_half.png',
+  './images/cup_image_low.png',
+];
+
 
 class InfoModal extends React.Component {
   constructor(props) {
@@ -55,7 +40,7 @@ class InfoModal extends React.Component {
               <p>Item name</p>
             </div>
             <div className="modal-image">
-              <div>Cup image</div>
+              <img src={cupImgPaths[Math.floor(Math.random() * cupImgPaths.length)]} />
             </div>
             <div className="modal-buttons">
               <p>Refilled?</p>
