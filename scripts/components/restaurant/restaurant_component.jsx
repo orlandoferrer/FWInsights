@@ -15,6 +15,11 @@ const RestaurantComponent = () => {
 
   return (
     <div>
+      <div className="page-sub-header">
+        <p>
+          Restaurant View
+        </p>
+      </div>
       <div className="restaurant-div">
         {
           tables.map((table) => {

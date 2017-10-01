@@ -16,6 +16,11 @@ const TableComponent = () => {
 
   return (
     <div>
+      <div className="page-sub-header">
+        <p>
+          Table View
+        </p>
+      </div>
       <div className="table-div">
         {
           sampleCustomers.map((el) => {

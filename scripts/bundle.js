@@ -27520,6 +27520,15 @@ var RestaurantComponent = function RestaurantComponent() {
     null,
     _react2.default.createElement(
       'div',
+      { className: 'page-sub-header' },
+      _react2.default.createElement(
+        'p',
+        null,
+        'Restaurant View'
+      )
+    ),
+    _react2.default.createElement(
+      'div',
       { className: 'restaurant-div' },
       tables.map(function (table) {
         return _react2.default.createElement(
@@ -27591,6 +27600,15 @@ var TableComponent = function TableComponent() {
   return _react2.default.createElement(
     'div',
     null,
+    _react2.default.createElement(
+      'div',
+      { className: 'page-sub-header' },
+      _react2.default.createElement(
+        'p',
+        null,
+        'Table View'
+      )
+    ),
     _react2.default.createElement(
       'div',
       { className: 'table-div' },
