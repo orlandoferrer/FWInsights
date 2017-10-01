@@ -13,3 +13,8 @@ p, span, h1, h2, h3 {
 a {
   text-decoration: none;
 }
+
+button {
+  text-decoration: none;
+  border: none;
+}

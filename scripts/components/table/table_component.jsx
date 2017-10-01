@@ -1,7 +1,9 @@
 import React from 'react';
+import Modal from 'react-modal';
+import InfoModal from '../info_modal/info_modal';
+
 
 const TableComponent = () => {
-
   // sample customers for demo
   let customers = [2, 3, 4];
   let randomIndex = Math.floor(Math.random() * customers.length);
@@ -12,17 +14,21 @@ const TableComponent = () => {
     sampleCustomers.push(1);
   }
 
-
   return (
     <div>
+      <div className="page-sub-header">
+        <p>
+          Table View
+        </p>
+      </div>
       <div className="table-div">
         {
           sampleCustomers.map((el) => {
             return (
               <div className="customer-place">
-              <img src="./images/glass.png" class="customer-glass"/>
                 {/*<div className="customer-glass"/>*/}
-              <img src="./images/plate2.png" class="customer-plate"/>  
+              <InfoModal/>
+              <img src="./images/plate2.png" className="customer-plate"/>
                 {/*<div className="customer-plate"/>*/}
               </div>
             );

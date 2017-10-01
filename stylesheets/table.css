@@ -27,6 +27,10 @@
   /*background: green;*/
 }
 
+.customer-glass:hover {
+  cursor: pointer;
+}
+
 .customer-plate {
   position: relative;
   top: 10px;
