@@ -1,0 +1,44 @@
+.restaurant-div {
+  display: flex;
+  background: #D8D8D8;
+  flex-flow: row wrap;
+  height: 100%;
+}
+
+.restaurant-table {
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-table {
+  background: grey;
+}
+
+.occupied-table {
+  background: green;
+}
+
+.restaurant-table > a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+
+.restaurant-table:hover {
+  border: 5px solid orange;
+  margin: 15px;
+}
+
+.restaurant-table p {
+  padding: 5px 0 5px 0;
+  color: black;
+  text-decoration: none;
+}
